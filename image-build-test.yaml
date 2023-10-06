@@ -1,0 +1,10 @@
+namespace: image-build-test
+image-build-test:
+  defines: runnable
+  metadata:
+    name: image-build-test
+    description: A PHP Apache application that runs an ELF binary.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    image-build-test:
+      build: .
