@@ -1,0 +1,20 @@
+namespace: image-build-test
+image-build-test:
+  defines: runnable
+  metadata:
+    name: image-build-test
+    description: >-
+      A simple PHP application that renders 'Hello World' and runs a binary
+      executable 'calc.elf'.
+    icon: https://emojiapi.dev/api/v1/globe_with_meridians.svg
+  containers:
+    image-build-test:
+      build: .
+  services:
+    http:
+      container: image-build-test
+      port: 80
+      host-port: 80
+      publish: false
+      protocol: TCP
+      description: HTTP serving port
