@@ -1,0 +1,12 @@
+namespace: image-build-test
+image-build-test:
+  defines: runnable
+  metadata:
+    name: image-build-test
+    description: >-
+      The image-build-test app is a compiled binary file that is made executable
+      and run in an Apache server using Docker.
+    icon: https://github.com/github.png
+  containers:
+    image-build-test:
+      build: .
