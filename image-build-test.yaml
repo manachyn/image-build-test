@@ -1,0 +1,18 @@
+namespace: image-build-test
+image-build-test:
+  defines: runnable
+  metadata:
+    name: image-build-test
+    description: A simple PHP application that displays 'Hello World' and an ELF execution
+    icon: https://github.com/manachyn/image-build-test
+  containers:
+    image-build-test:
+      build: .
+  services:
+    http:
+      container: image-build-test
+      port: 80
+      host-port: 80
+      publish: false
+      protocol: TCP
+      description: HTTP server port
