@@ -1,0 +1,18 @@
+namespace: image-build-test
+image-build-test:
+  defines: runnable
+  metadata:
+    name: image-build-test
+    description: A simple PHP application that outputs 'Hello World'.
+    icon: https://emojiapi.dev/api/v1/robot.svg
+  containers:
+    image-build-test:
+      build: .
+  services:
+    http:
+      container: image-build-test
+      port: 80
+      host-port: 80
+      publish: false
+      protocol: TCP
+      description: Used for web traffic.
